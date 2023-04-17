@@ -102,19 +102,13 @@ async function mainEvent() {
 
   generateListButton.addEventListener("click", (event) => {
     console.log("generate new list");
-    currentList = cutRestaurantList(parsedData);
+    currentList = cutRestaurantList(storedList);
     console.log(currentList);
     injectHTML(currentList);
     markerPlace(currentList, carto);
   });
 
-  textField.addEventListener("input", (event) => {
-    console.log("input", event.target.value);
-    const newList = filterList(currentList, event.target.value);
-    console.log(newList);
-    injectHTML(newList);
-    markerPlace(newList, carto);
-  });
+
 
   filterButton.addEventListener("click", (event) => {
     console.log("clicked FilterButton");
@@ -129,18 +123,12 @@ async function mainEvent() {
     injectHTML(newList);
   });
 
-  generateListButton.addEventListener("click", (event) => {
-    console.log("generate new list");
-    currentList = cutRestaurantList(storedList);
-    console.log(currentList);
-    injectHTML(currentList);
-  });
-
   textField.addEventListener('input', (event) => {
     console.log(event.target.value);
     const filteredList = filterList(storedList, event.target.value);
     console.log(filteredList)
     injectHTML(filteredList);
+    markerPlace(filteredList, carto);
   })
 }
 
