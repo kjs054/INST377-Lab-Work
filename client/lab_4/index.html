@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab04</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+      <div class="header">
+        <h1>Kevin Shiflett's Labs For INST377</h1>
+      </div>
+        <div class="container">
+          <div class="left_section box">
+            <h3>Form Inputs</h3>
+                <div class="box">
+                    <h6>Filter Query</h6>
+                    <form class="main_form" action="https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json">
+                        <label for="resto"></label>
+                        <input type="text" id="resto" />
+                        <div class="button-container">
+                            <button type="submit">Load Data</button>
+                        </div>
+                    </form>
+                </div>
+          </div>
+          <div class="right_section box">
+            <h3>Local Restaurants List</h3>
+            <div class="restaurant_list">
+                <div class="box">
+                    <h6>List of local restaurants</h6>
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <p>kjs054 <a href="https://github.com/kjs054/">My Account</a></p>
+      </footer>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,222 @@
+html {
+  background-color: #fff;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  min-width: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  /* these are specific to different browsers */
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: #e0d8e4;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+h2 {
+  margin:0;
+  padding:0;
+  padding-bottom:1.5rem;
+}
+
+form {
+  accent-color: #7ad788;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  flex: 1;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.header {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+
+.header h1 {
+  display: block;
+  /* this will push other blocks out of the way */
+  border: 5px dashed;
+  /* colors */
+  background-color: #2a284c;
+  color: #ffffff;
+
+  /* shapes */
+  border-radius: 6px;
+  font-size: 1rem;
+  padding: 1.25rem;
+  margin:0; /* removing the margin on h1 tags means the header pins to the top if we move */
+
+
+  /* box-shadows are fancy */
+  box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
+}
+
+.button-container {
+  display: flex;
+  height: 35px;
+}
+
+.button-container button {
+  flex: 0 50%;
+}
+
+.box{
+  border: 2px dashed white;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  width: fit-content;
+  height:fit-content;
+  padding: 0.5rem;
+  margin: 0 auto;
+  font-weight: bold;
+  width: 70%;
+  
+}
+
+.left_section {
+  background-color: #2a284c;
+  justify-items: center;
+  flex: 0 8 auto;
+  margin: 1rem;
+  padding-bottom: 1.5rem;
+  border: 2px dashed white;
+  margin-left: 1.5rem
+}
+
+h3, p {
+  color: white;
+}
+
+.right_section {
+  background-color: #2a284c;
+  flex: 1 2 auto;
+  margin: 1rem;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed white;
+  padding-bottom: 1.5rem;
+  width: 80%;
+}
+
+.box h6 {
+  color: white;
+  font-size: 20px;
+}
+
+.right_section .box h6 {
+  text-align: center;
+}
+
+.footer {
+  background-color: #2a284c;
+  position: absolute;
+  font-size: 1rem;
+  font-weight: 600;
+  flex-shrink: 0;
+  padding: 0.6rem;
+  bottom: 0%;
+  width: 100%;
+  border: 3px dashed white;
+}
+
+.footer a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer a:hover {
+  /* Hue, saturation, luminosity, alpha */
+  background-color: hsla(0, 0%, 90%, 0.15);
+  /* red, green, blue, alpha */
+  color: rgb(250, 125, 0);
+  text-decoration: none;
+}
+
+
+form input {
+    /* This is a hack to make sure our boxes line up with one another nicely */
+    width: 100%;
+    width: -moz-available;          /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    width: fill-available;
+
+    /* here we are setting white space correctly */
+    margin-bottom: 1rem;
+    height: 2rem;
+    border-radius: 4px;
+  }
+
+  form label {
+    width: 100%;
+    width: -moz-available;          /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    width: fill-available;
+    align-items: flex-start;
+
+    display: block; /* this turns the label text into a box we can set margins on */
+    margin-bottom: 0.5rem;
+  }
+
+/* How To Write A Media Query For Small Screens */
+/*mobile*/
+@media only screen and (max-width: 736px){
+    /* Rules in here will only apply when a screen is the correct size */
+    /* check it out by using your developer tools to shrink your screen-size */
+  .container {
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background-color: #cdf1ad;
+    display: flex;
+  }
+
+  .left_section {
+    justify-items: center;
+    background-color: #008fa8;
+    justify-items: center;
+    margin: 1rem;
+    border: 2px dashed;
+    width: 80%;
+    flex: 0 1 auto;
+  }
+
+  .footer {
+    position: sticky;
+  }
+  
+  .right_section {
+    background-color: #008fa8;
+    flex: 1 2 auto;
+    margin: 1rem;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid;
+  }
+}
